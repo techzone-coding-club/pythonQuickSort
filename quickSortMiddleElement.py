@@ -16,12 +16,12 @@ def partition(listA, low, high):
     return i+1
 
 
-def quickSortL(listA, low, high):
+def quickSortM(listA, low, high):
     if low < high:
         pi = partition(listA, low, high)
 
-        quickSortL(listA, low, pi-1)
-        quickSortL(listA, pi+1, high)
+        quickSortM(listA, low, pi - 1)
+        quickSortM(listA, pi + 1, high)
 
 
 if __name__ == '__main__':
@@ -31,5 +31,5 @@ if __name__ == '__main__':
 
     print("Using QuickSort with the Middle Element as the pivot\n==================================================")
     print("Before: {:}\n".format(list1))
-    quickSortL(list1, low, high)
+    quickSortM(list1, low, high)
     print("After: {:}\n".format(list1))

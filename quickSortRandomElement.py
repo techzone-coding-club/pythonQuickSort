@@ -27,12 +27,12 @@ def partitionR(listA, low, high):
     return partition(listA, low, high)
 
 
-def quickSortL(listA, low, high):
+def quickSortR(listA, low, high):
     if low < high:
         pi = partitionR(listA, low, high)
 
-        quickSortL(listA, low, pi-1)
-        quickSortL(listA, pi+1, high)
+        quickSortR(listA, low, pi - 1)
+        quickSortR(listA, pi + 1, high)
 
 
 if __name__ == '__main__':
@@ -46,6 +46,6 @@ if __name__ == '__main__':
     print("Using QuickSort with a Random Element as the pivot\n==================================================")
     print("Before: {:}\n".format(list1))
     print("Size of container: {:}\n".format(len(list1)))
-    quickSortL(list1, low, high)
+    quickSortR(list1, low, high)
     print("\nAfter: {:}".format(list1))
     print("Size of container: {:}".format(len(list1)))
